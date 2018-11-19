@@ -1,0 +1,284 @@
+object FormCadContato: TFormCadContato
+  Left = 949
+  Height = 513
+  Top = 219
+  Width = 681
+  Caption = 'Cadastro de Contatos'
+  ClientHeight = 513
+  ClientWidth = 681
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object DBNavContato: TDBNavigator
+    Left = 0
+    Height = 25
+    Top = 296
+    Width = 681
+    Align = alTop
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 681
+    DataSource = DataPrincipal.SourceContato
+    Options = []
+    TabOrder = 0
+  end
+  object GroupBoxContato: TGroupBox
+    Left = 0
+    Height = 296
+    Top = 0
+    Width = 681
+    Align = alTop
+    ClientHeight = 292
+    ClientWidth = 677
+    TabOrder = 1
+    object DBEditID: TDBEdit
+      Left = 96
+      Height = 32
+      Top = 8
+      Width = 80
+      DataField = 'id_contato'
+      DataSource = DataPrincipal.SourceContato
+      CharCase = ecNormal
+      MaxLength = 0
+      TabOrder = 0
+    end
+    object DBEditNome: TDBEdit
+      Left = 96
+      Height = 32
+      Top = 48
+      Width = 560
+      DataField = 'nome_contato'
+      DataSource = DataPrincipal.SourceContato
+      CharCase = ecNormal
+      MaxLength = 280
+      TabOrder = 1
+    end
+    object DBEditIDCategoria: TDBEdit
+      Left = 96
+      Height = 32
+      Top = 128
+      Width = 80
+      DataField = 'id_categoria'
+      DataSource = DataPrincipal.SourceContato
+      CharCase = ecNormal
+      MaxLength = 0
+      TabOrder = 2
+    end
+    object DBEditEndereco: TDBEdit
+      Left = 96
+      Height = 32
+      Top = 168
+      Width = 560
+      DataField = 'endereco'
+      DataSource = DataPrincipal.SourceContato
+      CharCase = ecNormal
+      MaxLength = 280
+      TabOrder = 3
+    end
+    object DBEditBairro: TDBEdit
+      Left = 96
+      Height = 32
+      Top = 208
+      Width = 560
+      DataField = 'bairro'
+      DataSource = DataPrincipal.SourceContato
+      CharCase = ecNormal
+      MaxLength = 120
+      TabOrder = 4
+    end
+    object DBEditIDCidade: TDBEdit
+      Left = 96
+      Height = 32
+      Top = 248
+      Width = 80
+      DataField = 'id_cidade'
+      DataSource = DataPrincipal.SourceContato
+      CharCase = ecNormal
+      MaxLength = 0
+      TabOrder = 5
+    end
+    object Label1: TLabel
+      Left = 72
+      Height = 18
+      Top = 8
+      Width = 14
+      Caption = '&ID'
+      FocusControl = DBEditID
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 46
+      Height = 18
+      Top = 48
+      Width = 38
+      Caption = '&Nome'
+      FocusControl = DBEditNome
+      ParentColor = False
+    end
+    object Label3: TLabel
+      Left = 23
+      Height = 18
+      Top = 128
+      Width = 60
+      Caption = '&Categoria'
+      FocusControl = DBEditIDCategoria
+      ParentColor = False
+    end
+    object Label4: TLabel
+      Left = 25
+      Height = 18
+      Top = 168
+      Width = 58
+      Caption = '&Endereço'
+      FocusControl = DBEditEndereco
+      ParentColor = False
+    end
+    object Label5: TLabel
+      Left = 46
+      Height = 18
+      Top = 208
+      Width = 38
+      Caption = '&Bairro'
+      FocusControl = DBEditBairro
+      ParentColor = False
+    end
+    object Label6: TLabel
+      Left = 41
+      Height = 18
+      Top = 248
+      Width = 43
+      Caption = 'C&idade'
+      FocusControl = DBEditIDCidade
+      ParentColor = False
+    end
+    object DBLookupCategoria: TDBLookupComboBox
+      Left = 184
+      Height = 32
+      Top = 128
+      Width = 472
+      DataField = 'id_categoria'
+      DataSource = DataPrincipal.SourceContato
+      KeyField = 'id_categoria'
+      ListField = 'den_categoria'
+      ListFieldIndex = 0
+      ListSource = DataPrincipal.SourceCategoria
+      LookupCache = False
+      Style = csDropDownList
+      TabOrder = 6
+    end
+    object DBLookupCidade: TDBLookupComboBox
+      Left = 184
+      Height = 32
+      Top = 248
+      Width = 472
+      DataField = 'id_cidade'
+      DataSource = DataPrincipal.SourceContato
+      KeyField = 'id_cidade'
+      ListField = 'den_cidade'
+      ListFieldIndex = 0
+      ListSource = DataPrincipal.SourceCidade
+      LookupCache = False
+      Style = csDropDownList
+      TabOrder = 7
+    end
+    object DBDateNascimento: TDBDateTimePicker
+      Left = 96
+      Height = 33
+      Top = 88
+      Width = 152
+      DataField = 'data_nascimento'
+      DataSource = DataPrincipal.SourceContato
+      ReadOnly = False
+      CenturyFrom = 1941
+      MaxDate = 2958465
+      MinDate = -53780
+      AutoSize = False
+      TabOrder = 8
+      DateSeparator = '-'
+      TrailingSeparator = False
+      TextForNullDate = 'NULL'
+      LeadingZeros = True
+      Kind = dtkDate
+      TimeSeparator = ':'
+      TimeFormat = tf24
+      TimeDisplay = tdHMS
+      DateMode = dmComboBox
+      UseDefaultSeparators = False
+      AutoButtonSize = True
+      HideDateTimeParts = []
+      MonthNames = 'Long'
+    end
+    object Label7: TLabel
+      Left = 8
+      Height = 18
+      Top = 88
+      Width = 73
+      Caption = 'N&ascimento'
+      FocusControl = DBDateNascimento
+      ParentColor = False
+    end
+  end
+  object GroupBoxTelefone: TGroupBox
+    Left = 0
+    Height = 192
+    Top = 321
+    Width = 681
+    Align = alClient
+    Caption = '&Telefones'
+    ClientHeight = 162
+    ClientWidth = 677
+    TabOrder = 2
+    object DBNavTelefones: TDBNavigator
+      Left = 636
+      Height = 162
+      Top = 0
+      Width = 41
+      Align = alRight
+      BevelOuter = bvNone
+      ChildSizing.EnlargeHorizontal = crsScaleChilds
+      ChildSizing.EnlargeVertical = crsScaleChilds
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclTopToBottomThenLeftToRight
+      ChildSizing.ControlsPerLine = 100
+      ClientHeight = 162
+      ClientWidth = 41
+      DataSource = DataPrincipal.SourceTelefone
+      Direction = nbdVertical
+      Options = []
+      TabOrder = 0
+      VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
+    end
+    object DBGridTelefone: TDBGrid
+      Left = 0
+      Height = 162
+      Top = 0
+      Width = 636
+      Align = alClient
+      Color = clWindow
+      Columns = <      
+        item
+          Title.Caption = 'id_contato'
+          Visible = False
+          FieldName = 'id_contato'
+        end      
+        item
+          Title.Caption = 'Telefone'
+          Width = 150
+          FieldName = 'telefone'
+        end      
+        item
+          Title.Caption = 'Observação'
+          Width = 300
+          FieldName = 'observacao'
+        end>
+      DataSource = DataPrincipal.SourceTelefone
+      TabOrder = 1
+    end
+  end
+end

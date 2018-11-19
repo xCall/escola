@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Start your project here-->
+    <div style="height: 100vh">
+        <div class="flex-center flex-column">
+            <label for="nome">Nome: </label>
+            <input onkeyup="contador()" type="text" name="" id="nome">
+            <br>
+            <p id="contador"></p>
+            <br>
+            <label for="capital">Capital</label>
+            <input type="number" id="capital">
+            <br>
+            <label for="tempo">Tempo</label>
+            <input type="number" id="tempo">
+            <br>
+            <label for="taxa">Taxa</label>
+            <input type="number id=" taxa ">
+            <br>
+            <button type="submit " onclick="calcula() ">Calcular</button>
+        </div>
+        <div class="flex-center " style="background-color: black ">
+            <br>
+            <img src="img/off.png " id="luz " alt=" ">
+            <img src="img/int_off.jpg " alt=" " id="apagador " onmouseout="apagar() " onmousemove="acender(event) ">
+        </div>
+    </div>
+    <!-- /Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript " src="js/jquery-3.3.1.min.js "></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript " src="js/popper.min.js "></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript " src="js/bootstrap.min.js "></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript " src="js/mdb.min.js "></script>
+    <!--Meu Script-->
+    <script src="js/script.js "></script>
+</body>
+
+</html>

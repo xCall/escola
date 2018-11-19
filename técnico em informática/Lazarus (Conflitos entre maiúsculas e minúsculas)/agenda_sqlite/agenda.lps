@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="10">
+      <Unit0>
+        <Filename Value="agenda.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="16"/>
+        <UsageCount Value="40"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="fprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="19"/>
+        <CursorPos Y="34"/>
+        <UsageCount Value="40"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="dprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DataPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos Y="7"/>
+        <UsageCount Value="40"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="fcadcidade.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormCadCidade"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="14"/>
+        <CursorPos Y="34"/>
+        <UsageCount Value="40"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="fcadcategoria.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormCadCategoria"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="9"/>
+        <CursorPos Y="30"/>
+        <UsageCount Value="34"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="fcadcontato.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormCadContato"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="10"/>
+        <CursorPos X="48" Y="14"/>
+        <UsageCount Value="34"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="fconsulta.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormConsulta"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="60"/>
+        <CursorPos X="39" Y="93"/>
+        <UsageCount Value="26"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../../../../../../../../.lazarus/ZEOSDBO-7.1.4-stable/src/component/ZSqlUpdate.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="656"/>
+        <CursorPos Y="661"/>
+        <UsageCount Value="9"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="/usr/share/fpcsrc/3.0.2/packages/fcl-db/src/base/db.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="36"/>
+        <CursorPos X="3" Y="49"/>
+        <UsageCount Value="9"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../../../../../../../../.lazarus/ZEOSDBO-7.1.4-stable/src/dbc/ZDbcSqLiteUtils.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="262"/>
+        <CursorPos Y="267"/>
+        <UsageCount Value="9"/>
+      </Unit9>
+    </Units>
+    <JumpHistory Count="18" HistoryIndex="17">
+      <Position1>
+        <Filename Value="fcadcontato.pas"/>
+        <Caret Line="14" Column="48" TopLine="6"/>
+      </Position1>
+      <Position2>
+        <Filename Value="dprincipal.pas"/>
+        <Caret Line="26" Column="34" TopLine="14"/>
+      </Position2>
+      <Position3>
+        <Filename Value="dprincipal.pas"/>
+        <Caret Line="24" Column="30" TopLine="14"/>
+      </Position3>
+      <Position4>
+        <Filename Value="dprincipal.pas"/>
+        <Caret Line="45" Column="3" TopLine="25"/>
+      </Position4>
+      <Position5>
+        <Filename Value="dprincipal.pas"/>
+        <Caret Line="27" TopLine="20"/>
+      </Position5>
+      <Position6>
+        <Filename Value="dprincipal.pas"/>
+        <Caret Line="28" TopLine="20"/>
+      </Position6>
+      <Position7>
+        <Filename Value="fconsulta.pas"/>
+      </Position7>
+      <Position8>
+        <Filename Value="fconsulta.pas"/>
+        <Caret Line="41" Column="17" TopLine="19"/>
+      </Position8>
+      <Position9>
+        <Filename Value="fconsulta.pas"/>
+        <Caret Line="61" Column="7" TopLine="37"/>
+      </Position9>
+      <Position10>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="45" Column="29" TopLine="30"/>
+      </Position10>
+      <Position11>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="47" Column="29" TopLine="32"/>
+      </Position11>
+      <Position12>
+        <Filename Value="fconsulta.pas"/>
+        <Caret Line="56" Column="42" TopLine="42"/>
+      </Position12>
+      <Position13>
+        <Filename Value="fconsulta.pas"/>
+        <Caret Line="83" Column="21" TopLine="61"/>
+      </Position13>
+      <Position14>
+        <Filename Value="fconsulta.pas"/>
+        <Caret Line="78" Column="33" TopLine="60"/>
+      </Position14>
+      <Position15>
+        <Filename Value="fconsulta.pas"/>
+        <Caret Line="66" TopLine="61"/>
+      </Position15>
+      <Position16>
+        <Filename Value="dprincipal.pas"/>
+        <Caret Line="30" TopLine="4"/>
+      </Position16>
+      <Position17>
+        <Filename Value="dprincipal.pas"/>
+        <Caret Line="49" Column="25" TopLine="10"/>
+      </Position17>
+      <Position18>
+        <Filename Value="fprincipal.pas"/>
+        <Caret Line="32" Column="27" TopLine="20"/>
+      </Position18>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

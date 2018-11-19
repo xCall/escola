@@ -1,0 +1,5 @@
+automoveis  250000/5 = 50000 /12 = 4166
+maquinas para programação 130000/3 = 43333/12 = 3611
+maquinas para manutenção 50000/3 = 16666/12 = 1388
+predio 1500000/25 = 60000/12 = 5000
+moveis 50000/10 = 5000/12 = 416

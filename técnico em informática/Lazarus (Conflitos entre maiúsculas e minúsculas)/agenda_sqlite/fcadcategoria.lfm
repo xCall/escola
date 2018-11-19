@@ -1,0 +1,51 @@
+object FormCadCategoria: TFormCadCategoria
+  Left = 591
+  Height = 186
+  Top = 199
+  Width = 495
+  Caption = 'Cadastro de Categorias'
+  ClientHeight = 186
+  ClientWidth = 495
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 161
+    Top = 0
+    Width = 495
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        ReadOnly = True
+        Title.Caption = 'ID'
+        FieldName = 'id_categoria'
+      end    
+      item
+        Title.Caption = 'Categoria'
+        Width = 350
+        FieldName = 'den_categoria'
+      end>
+    DataSource = DataPrincipal.SourceCategoria
+    TabOrder = 0
+  end
+  object DBNavCategoria: TDBNavigator
+    Left = 0
+    Height = 25
+    Top = 161
+    Width = 495
+    Align = alBottom
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 495
+    DataSource = DataPrincipal.SourceCategoria
+    Options = []
+    TabOrder = 1
+  end
+end

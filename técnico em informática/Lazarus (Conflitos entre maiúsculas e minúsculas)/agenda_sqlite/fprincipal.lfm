@@ -1,0 +1,47 @@
+object FormPrincipal: TFormPrincipal
+  Left = 665
+  Height = 231
+  Top = 281
+  Width = 240
+  Caption = 'Agenda'
+  ClientHeight = 231
+  ClientWidth = 240
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object ButtonCadCidade: TButton
+    Left = 8
+    Height = 48
+    Top = 64
+    Width = 224
+    Caption = 'C&idades'
+    OnClick = ButtonCadCidadeClick
+    TabOrder = 1
+  end
+  object ButtonCadCategoria: TButton
+    Left = 8
+    Height = 48
+    Top = 120
+    Width = 224
+    Caption = 'C&ategorias'
+    OnClick = ButtonCadCategoriaClick
+    TabOrder = 2
+  end
+  object ButtonCadContato: TButton
+    Left = 8
+    Height = 48
+    Top = 8
+    Width = 224
+    Caption = '&Contatos'
+    OnClick = ButtonCadContatoClick
+    TabOrder = 0
+  end
+  object ButtonConsultas: TButton
+    Left = 8
+    Height = 48
+    Top = 176
+    Width = 224
+    Caption = 'C&onsultas'
+    OnClick = ButtonConsultasClick
+    TabOrder = 3
+  end
+end
