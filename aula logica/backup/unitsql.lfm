@@ -1,0 +1,91 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 323
+  HorizontalOffset = 966
+  VerticalOffset = 250
+  Width = 602
+  PPI = 96
+  object ZConPrincipal: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = False
+    Properties.Strings = (
+      'AutoEncodeStrings='
+    )
+    Connected = True
+    Port = 0
+    Database = '/home/xcall/dbtest.db'
+    Protocol = 'sqlite-3'
+    left = 41
+    top = 31
+  end
+  object ZUpdateCidade: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM CIDADE'
+      'WHERE cidade.id_cidade = :OLD_id_cidade'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO cidade(id_cidade, den_cidade, uf)'
+      'VALUES (:id_cidade, :den_cidade, :uf)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE cidade SET'
+      'id_cidade = :id_cidade,'
+      'den_cidade = :den_cidade,'
+      'uf = :uf'
+      'WHERE cidade.id_cidade = :OLD_id_cidade'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 168
+    top = 104
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'id_cidade'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'den_cidade'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'uf'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_id_cidade'
+        ParamType = ptUnknown
+      end>
+  end
+  object ZQueryCidade: TZQuery
+    Connection = ZConPrincipal
+    UpdateObject = ZUpdateCidade
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM cidade'
+    )
+    Params = <>
+    left = 168
+    top = 31
+  end
+  object ZTableCategoria: TZTable
+    Connection = ZConPrincipal
+    Active = True
+    TableName = 'categoria'
+    left = 168
+    top = 168
+  end
+  object DataSourceCidade: TDataSource
+    AutoEdit = False
+    DataSet = ZQueryCidade
+    left = 43
+    top = 113
+  end
+  object DataSourceCategoria: TDataSource
+    DataSet = ZTableCategoria
+    left = 41
+    top = 176
+  end
+end

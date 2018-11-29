@@ -1,0 +1,87 @@
+object FormCadastroCidades: TFormCadastroCidades
+  Left = 0
+  Height = 208
+  Top = 0
+  Width = 391
+  Caption = 'Cadastro de Cidades'
+  ClientHeight = 208
+  ClientWidth = 391
+  Visible = False
+  object DBNavCidade: TDBNavigator
+    Left = 0
+    Height = 25
+    Top = 183
+    Width = 391
+    Align = alBottom
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 391
+    DataSource = DataModule1.DataSourceCidade
+    Options = []
+    TabOrder = 0
+  end
+  object LabelId: TLabel
+    Left = 34
+    Height = 17
+    Top = 48
+    Width = 13
+    Caption = '&ID'
+    FocusControl = DBEditId
+    ParentColor = False
+  end
+  object LabelCidade: TLabel
+    Left = 32
+    Height = 17
+    Top = 88
+    Width = 39
+    Caption = '&Cidade'
+    FocusControl = DBNavCidade
+    ParentColor = False
+  end
+  object LabelUf: TLabel
+    Left = 32
+    Height = 17
+    Top = 128
+    Width = 15
+    Caption = '&UF'
+    FocusControl = DBEditUf
+    ParentColor = False
+  end
+  object DBEditId: TDBEdit
+    Left = 88
+    Height = 29
+    Top = 40
+    Width = 80
+    DataField = 'id_cidade'
+    ReadOnly = True
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 1
+  end
+  object DBEditCidade: TDBEdit
+    Left = 87
+    Height = 29
+    Top = 80
+    Width = 177
+    DataField = 'den_cidade'
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 2
+  end
+  object DBEditUf: TDBEdit
+    Left = 88
+    Height = 29
+    Top = 120
+    Width = 176
+    DataField = 'uf'
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 3
+  end
+end

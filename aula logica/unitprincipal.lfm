@@ -1,0 +1,42 @@
+object formInicio: TformInicio
+  Left = 0
+  Height = 259
+  Top = 0
+  Width = 296
+  Caption = 'Inicio'
+  ClientHeight = 259
+  ClientWidth = 296
+  Visible = False
+  object buttonCotatos: TButton
+    Left = 96
+    Height = 25
+    Top = 56
+    Width = 99
+    Caption = 'Contatos'
+    TabOrder = 0
+  end
+  object buttonCidade: TButton
+    Left = 96
+    Height = 25
+    Top = 96
+    Width = 99
+    Caption = 'Cidade'
+    TabOrder = 1
+  end
+  object ButtonCategorias: TButton
+    Left = 96
+    Height = 25
+    Top = 136
+    Width = 99
+    Caption = 'Categorias'
+    TabOrder = 2
+  end
+  object buttonConsultas: TButton
+    Left = 96
+    Height = 25
+    Top = 176
+    Width = 99
+    Caption = 'Consultas'
+    TabOrder = 3
+  end
+end

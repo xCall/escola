@@ -1,0 +1,236 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 201
+  HorizontalOffset = 696
+  VerticalOffset = 177
+  Width = 374
+  PPI = 96
+  object ZConnectionPrincipal: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = False
+    Properties.Strings = (
+      'AutoEncodeStrings='
+    )
+    Connected = True
+    Port = 0
+    Database = '/home/danilo/Documentos/Banco de Dados/Aula1/Aula1.db'
+    Protocol = 'sqlite-3'
+    left = 27
+    top = 21
+  end
+  object ZQueryCidade: TZQuery
+    Connection = ZConnectionPrincipal
+    UpdateObject = ZUpdateSQLCidades
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM cidade'
+    )
+    Params = <>
+    left = 77
+    top = 21
+  end
+  object ZUpdateSQLCidades: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM cidade WHERE cidade.id_cidade = :OLD_id_cidade'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO cidade(id_cidade,den_cidade,uf) VALUES (:id_cidade,:den_cidade,:uf)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE cidade SET '
+      'id_cidade = :id_cidade,'
+      'den_cidade = :den_cidade,'
+      'uf = :uf '
+      'WHERE cidade.id_cidade = :OLD_id_cidade'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 120
+    top = 21
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'id_cidade'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'den_cidade'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'uf'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_id_cidade'
+        ParamType = ptUnknown
+      end>
+  end
+  object DataSourceCidades: TDataSource
+    AutoEdit = False
+    DataSet = ZQueryCidade
+    left = 27
+    top = 80
+  end
+  object DataSourceCategoria: TDataSource
+    AutoEdit = False
+    DataSet = ZTableCategoria
+    left = 72
+    top = 80
+  end
+  object ZTableCategoria: TZTable
+    Connection = ZConnectionPrincipal
+    Active = True
+    TableName = 'categoria'
+    left = 120
+    top = 80
+  end
+  object ZQueryContato: TZQuery
+    Connection = ZConnectionPrincipal
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM contato'
+    )
+    Params = <>
+    left = 168
+    top = 21
+  end
+  object ZUpdateSQLContato: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM contato WHERE contato.id_contato = :OLD_id_contato'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO contato(id_contato, nome_contato, data_nascimento, endereco, bairro,id_categoria, id_cidade)'
+      'VALUES (:id_contato, :nome_contato, :data_nascimento, :endereco, :bairro,:id_categoria, :id_cidade)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE contato SET'
+      'id_contato = :id_contato,'
+      'nome_contato = :nome_contato,'
+      'data_nascimento = :data_nascimento,'
+      'endereco = :endereco,'
+      'bairro = :bairro,'
+      'id_categoria = :id_categoria,'
+      'id_cidade = :id_cidade'
+      'WHERE contato.id_contato = :OLD_id_contato'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 168
+    top = 80
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'id_contato'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'nome_contato'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'data_nascimento'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'endereco'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'bairro'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'id_categoria'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'id_cidade'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_id_contato'
+        ParamType = ptUnknown
+      end>
+  end
+  object DataSourceContato: TDataSource
+    AutoEdit = False
+    DataSet = ZQueryContato
+    left = 27
+    top = 136
+  end
+  object DataSourceTelefone: TDataSource
+    AutoEdit = False
+    DataSet = ZQueryTelefone
+    left = 72
+    top = 136
+  end
+  object ZQueryTelefone: TZQuery
+    Connection = ZConnectionPrincipal
+    UpdateObject = ZUpdateTelefone
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM telefone'
+    )
+    Params = <>
+    MasterFields = 'id_contato'
+    MasterSource = DataSourceContato
+    LinkedFields = 'id_contato'
+    left = 120
+    top = 136
+  end
+  object ZUpdateTelefone: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM telefone'
+      'WHERE id_contato = :OLD_id_contato'
+      'AND telefone = :OLD_telefone'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO telefone(telefone, id_contato, observacao)'
+      'VALUES(:telefone, :id_contato, :observacao)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE telefone SET telefone = :telefone,'
+      'id_contato = :id_contato, observacao = :observacao'
+      'WHERE id_contato = :OLD_id_contato'
+      'AND telefone = :OLD_telefone'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 168
+    top = 136
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'telefone'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'id_contato'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'observacao'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_id_contato'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_telefone'
+        ParamType = ptUnknown
+      end>
+  end
+end

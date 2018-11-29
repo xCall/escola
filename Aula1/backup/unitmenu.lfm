@@ -1,0 +1,46 @@
+object FormMenu: TFormMenu
+  Left = 616
+  Height = 264
+  Top = 408
+  Width = 261
+  Caption = 'Menu'
+  ClientHeight = 264
+  ClientWidth = 261
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  object ButtonContatos: TButton
+    Left = 56
+    Height = 48
+    Top = 24
+    Width = 144
+    Caption = '&Contatos'
+    OnClick = ButtonContatosClick
+    TabOrder = 0
+  end
+  object ButtonCidade: TButton
+    Left = 56
+    Height = 48
+    Top = 80
+    Width = 144
+    Caption = 'C&idades'
+    OnClick = ButtonCidadeClick
+    TabOrder = 1
+  end
+  object ButtonCategoria: TButton
+    Left = 56
+    Height = 48
+    Top = 136
+    Width = 144
+    Caption = 'C&ategorias'
+    OnClick = ButtonCategoriaClick
+    TabOrder = 2
+  end
+  object ButtonConsultas: TButton
+    Left = 56
+    Height = 48
+    Top = 192
+    Width = 144
+    Caption = 'C&onsultas'
+    TabOrder = 3
+  end
+end

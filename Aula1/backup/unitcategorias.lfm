@@ -1,0 +1,52 @@
+object FormCategorias: TFormCategorias
+  Left = 700
+  Height = 240
+  Top = 191
+  Width = 320
+  Caption = 'Categorias'
+  ClientHeight = 240
+  ClientWidth = 320
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  object DBNavigatorCategorias: TDBNavigator
+    Left = 0
+    Height = 25
+    Top = 215
+    Width = 320
+    Align = alBottom
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 320
+    DataSource = DataModule1.DataSourceCategoria
+    Options = []
+    TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 215
+    Top = 0
+    Width = 320
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        ReadOnly = True
+        Title.MultiLine = True
+        Title.Caption = 'Id'
+        FieldName = 'id_categoria'
+      end    
+      item
+        Title.MultiLine = True
+        Title.Caption = 'Categoria'
+        FieldName = 'den_categoria'
+      end>
+    DataSource = DataModule1.DataSourceCategoria
+    TabOrder = 1
+  end
+end
